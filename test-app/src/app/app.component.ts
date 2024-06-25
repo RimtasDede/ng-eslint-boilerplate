@@ -16,6 +16,16 @@ export class AppComponent {
 
     // }
 
+    //aaaa
+    const arr1 = [1, 2];
+    const arr2 = [
+      1,
+      2
+    ];
+    const arr3 = [1,
+      2];
+
+    console.log(arr1, arr2, arr3);
     debugger;
 
     // typeof this.aaa === "string"
@@ -26,7 +36,7 @@ export class AppComponent {
       return 5 + a;
     };
 
-    const foo = [1,2,3];
+    const foo = [1, 2, 3];
 
     for (const i in foo) {
       console.log(i);

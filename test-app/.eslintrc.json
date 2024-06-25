@@ -8,6 +8,9 @@
       "files": [
         "*.ts"
       ],
+      "plugins": [
+        "@stylistic/eslint-plugin"
+      ],
       "extends": [
         "eslint:recommended",
         "plugin:@typescript-eslint/recommended",
@@ -127,7 +130,7 @@
         "max-lines-per-function": ["error", 100],
         "max-nested-callbacks": "off",
         "max-params": ["warn", 8],
-        "max-statements": ["warn", 10],
+        "max-statements": ["warn", 12],
         "new-cap": "off",
         "no-alert": "warn",
         "no-array-constructor": "error",
@@ -232,7 +235,94 @@
         "sort-vars": "off",
         "symbol-description": "error",
         "vars-on-top": "error",
-        "yoda": "error"
+        "yoda": "error",
+
+        "@stylistic/array-bracket-newline": "error",
+        "@stylistic/array-bracket-spacing": [
+          "error",
+          "never",
+          {
+            "singleValue": false,
+            "objectsInArrays": false,
+            "arraysInArrays": false
+          }
+        ],
+        "@stylistic/array-element-newline": ["error", "consistent"],
+        "@stylistic/arrow-parens": ["error", "as-needed"],
+        "@stylistic/arrow-spacing": "error",
+        "@stylistic/block-spacing": "error",
+        "@stylistic/brace-style": "error",
+        "@stylistic/comma-dangle": ["error", "only-multiline"],
+        "@stylistic/comma-spacing": ["error", { "before": false, "after": true }],
+        "@stylistic/comma-style": "error",
+        "@stylistic/computed-property-spacing": "off",
+        "@stylistic/dot-location": ["error", "property"],
+        "@stylistic/eol-last": ["error", "always"],
+        "@stylistic/function-call-spacing": ["error", "never"],
+        "@stylistic/function-call-argument-newline": ["error", "consistent"],
+        "@stylistic/function-paren-newline": ["error", "multiline"],
+        "@stylistic/generator-star-spacing": "error",
+        "@stylistic/implicit-arrow-linebreak": ["error", "beside"],
+        "@stylistic/key-spacing": "error",
+        "@stylistic/line-comment-position": "off",
+        "@stylistic/linebreak-style": "error",
+        "@stylistic/lines-around-comment": "error",
+        "@stylistic/lines-between-class-members": ["error", "always", { "exceptAfterSingleLine": true }],
+        "@stylistic/max-len": ["error", { "code": 140 }],
+        "@stylistic/max-statements-per-line": ["error", { "max": 1 }],
+        "@stylistic/multiline-comment-style": "error",
+        "@stylistic/multiline-ternary": ["error", "always-multiline"],
+        "@stylistic/new-parens": "error",
+        "@stylistic/newline-per-chained-call": ["error", { "ignoreChainWithDepth": 3 }],
+        "@stylistic/no-confusing-arrow": "error",
+        "@stylistic/no-extra-parens": "error",
+        "@stylistic/no-extra-semi": "error",
+        "@stylistic/no-floating-decimal": "error",
+        "@stylistic/no-mixed-operators": "error",
+        "@stylistic/no-multi-spaces": "error",
+        "@stylistic/no-multiple-empty-lines": "error",
+        "@stylistic/no-tabs": "error",
+        "@stylistic/no-trailing-spaces": "error",
+        "@stylistic/no-whitespace-before-property": "error",
+        "@stylistic/nonblock-statement-body-position": "error",
+        "@stylistic/object-curly-newline": ["error", { "multiline": true }],
+        "@stylistic/object-curly-spacing": ["error", "always"],
+        "@stylistic/object-property-newline": "error",
+        "@stylistic/one-var-declaration-per-line": "error",
+        "@stylistic/operator-linebreak": [
+          "error",
+          "none",
+          {
+            "overrides": {
+              "?": "before",
+              ":": "before",
+              "||": "before",
+              "&&": "before"
+            }
+          }
+        ],
+        "@stylistic/padded-blocks": ["error", "never"],
+        "@stylistic/padding-line-between-statements": [
+          "error",
+          { "blankLine": "always", "prev": ["const", "let", "var"], "next": "*" },
+          { "blankLine": "any",    "prev": ["const", "let", "var"], "next": ["const", "let", "var"] }
+        ],
+        "@stylistic/quote-props": ["error", "as-needed"],
+        "@stylistic/quotes": ["error", "single"],
+        "@stylistic/rest-spread-spacing": ["error", "never"],
+        "@stylistic/semi": ["error", "always", { "omitLastInOneLineBlock": true }],
+        "@stylistic/semi-spacing": ["error", { "before": false, "after": true }],
+        "@stylistic/semi-style": ["error", "last"],
+        "@stylistic/space-before-blocks": "error",
+        "@stylistic/space-before-function-paren": ["error", "never"],
+        "@stylistic/space-in-parens": ["error", "never"],
+        "@stylistic/space-infix-ops": "error",
+        "@stylistic/space-unary-ops": "error",
+        "@stylistic/spaced-comment": "error",
+        "@stylistic/switch-colon-spacing": "error",
+        "@stylistic/template-curly-spacing": "error",
+        "@stylistic/template-tag-spacing": "error",
+        "@stylistic/wrap-regex": "off"
       }
     },
     {
