@@ -237,7 +237,7 @@
         "vars-on-top": "error",
         "yoda": "error",
 
-        "@stylistic/array-bracket-newline": "error",
+        "@stylistic/array-bracket-newline": ["error", "consistent"],
         "@stylistic/array-bracket-spacing": [
           "error",
           "never",
@@ -323,6 +323,14 @@
         "@stylistic/template-curly-spacing": "error",
         "@stylistic/template-tag-spacing": "error",
         "@stylistic/wrap-regex": "off"
+      }
+    },
+    {
+      "files": [
+        "*.spec.ts"
+      ],
+      "rules": {
+        "no-undef": "off"
       }
     },
     {
