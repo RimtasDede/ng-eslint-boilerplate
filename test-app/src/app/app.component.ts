@@ -10,7 +10,9 @@ export class AppComponent {
   aaa: string[] = [];
   aaa1: Array<string> = []; // err
 
-  a() {
+  a(storage: Storage) {
+    console.log(storage);
+
     // for (let index = 0; index < array.length; index++) {
     //   const element = array[index];
 

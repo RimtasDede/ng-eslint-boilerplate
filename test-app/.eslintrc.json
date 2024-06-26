@@ -17,6 +17,9 @@
         "plugin:@angular-eslint/recommended",
         "plugin:@angular-eslint/template/process-inline-templates"
       ],
+      "globals": {
+        "Storage": "readonly"
+      },
       "rules": {
         "@angular-eslint/directive-selector": [
           "error",
@@ -93,7 +96,7 @@
         "no-unsafe-negation": "error",
         "no-unsafe-optional-chaining": "error",
         "no-unused-private-class-members": "error",
-        "no-unused-vars": "warn",
+        "no-unused-vars": ["warn", { "args": "none" }],
         "no-use-before-define": "error",
         "no-useless-backreference": "error",
         "require-atomic-updates": "error",
@@ -143,7 +146,7 @@
         "no-div-regex": "warn",
         "no-else-return": "off",
         "no-empty": "error",
-        "no-empty-function": "error",
+        "no-empty-function": ["error", { "allow": ["constructors", "arrowFunctions"] }],
         "no-empty-static-block": "off",
         "no-eq-null": "error",
         "no-eval": "error",
@@ -202,7 +205,7 @@
         "no-useless-catch": "error",
         "no-useless-computed-key": "error",
         "no-useless-concat": "error",
-        "no-useless-constructor": "warn",
+        "no-useless-constructor": "off",
         "no-useless-escape": "warn",
         "no-useless-rename": "error",
         "no-useless-return": "error",
@@ -260,7 +263,7 @@
         "@stylistic/eol-last": ["error", "always"],
         "@stylistic/function-call-spacing": ["error", "never"],
         "@stylistic/function-call-argument-newline": ["error", "consistent"],
-        "@stylistic/function-paren-newline": ["error", "multiline"],
+        "@stylistic/function-paren-newline": ["error", "multiline-arguments"],
         "@stylistic/generator-star-spacing": "error",
         "@stylistic/implicit-arrow-linebreak": ["error", "beside"],
         "@stylistic/key-spacing": "error",
