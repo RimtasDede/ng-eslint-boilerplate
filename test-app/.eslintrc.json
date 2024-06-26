@@ -17,8 +17,10 @@
         "plugin:@angular-eslint/recommended",
         "plugin:@angular-eslint/template/process-inline-templates"
       ],
+      "env": {
+        "browser": true
+      },
       "globals": {
-        "Storage": "readonly"
       },
       "rules": {
         "@angular-eslint/directive-selector": [
@@ -344,6 +346,10 @@
       "files": [
         "*.spec.ts"
       ],
+      "env": {
+        "jasmine": true,
+        "jest": true
+      },
       "globals": {
         "describe": "readonly",
         "fdescribe": "readonly",
