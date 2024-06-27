@@ -42,7 +42,13 @@
 
         "@typescript-eslint/array-type": "error",
         "@typescript-eslint/no-unused-vars": "warn",
-        "@typescript-eslint/no-use-before-define": ["error", { "classes": false }],
+        "@typescript-eslint/no-use-before-define": [
+          "error",
+          {
+            "classes": false,
+            "functions": false
+          }
+        ],
         "@typescript-eslint/no-shadown": "error",
         "@typescript-eslint/member-ordering": [
           "error",
