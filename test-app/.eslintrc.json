@@ -225,7 +225,7 @@
         "no-void": "error",
         "no-warning-comments": "off",
         "no-with": "error",
-        "object-shorthand": "error",
+        "object-shorthand": ["error", "consistent"],
         "one-var": "off",
         "operator-assignment": "error",
         "prefer-arrow-callback": "error",
