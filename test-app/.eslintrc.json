@@ -42,6 +42,7 @@
 
         "@typescript-eslint/array-type": "error",
         "@typescript-eslint/no-unused-vars": "warn",
+        "@typescript-eslint/no-use-before-define": ["error", { "classes": false }],
         "@typescript-eslint/no-shadown": "error",
         "@typescript-eslint/member-ordering": [
           "error",
@@ -101,7 +102,7 @@
         "no-unsafe-optional-chaining": "error",
         "no-unused-private-class-members": "error",
         "no-unused-vars": "off",
-        "no-use-before-define": ["error", { "classes": false }],
+        "no-use-before-define": "off",
         "no-useless-backreference": "error",
         "require-atomic-updates": "error",
         "use-isnan": "error",
