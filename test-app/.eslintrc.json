@@ -329,10 +329,10 @@
             }
           }
         ],
-        "@stylistic/padded-blocks": ["error", "never"],
+        "@stylistic/padded-blocks": ["error", { "classes": "always" }],
         "@stylistic/padding-line-between-statements": [
           "error",
-          { "blankLine": "always", "prev": ["const", "let", "var", "block-like"], "next": "*" },
+          { "blankLine": "always", "prev": ["const", "let", "var", "block-like", "class"], "next": "*" },
           { "blankLine": "always", "prev": "*", "next": "return" },
           { "blankLine": "any",    "prev": ["const", "let", "var"], "next": ["const", "let", "var"] }
         ],
