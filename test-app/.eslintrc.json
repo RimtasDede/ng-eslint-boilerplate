@@ -278,6 +278,7 @@
         "@stylistic/generator-star-spacing": "error",
         "@stylistic/implicit-arrow-linebreak": ["error", "beside"],
         "@stylistic/key-spacing": "error",
+        "keyword-spacing": "error",
         "@stylistic/line-comment-position": "off",
         "@stylistic/linebreak-style": "error",
         "@stylistic/lines-around-comment": [
