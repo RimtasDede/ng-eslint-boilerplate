@@ -294,7 +294,14 @@
         "@stylistic/new-parens": "error",
         "@stylistic/newline-per-chained-call": ["error", { "ignoreChainWithDepth": 3 }],
         "@stylistic/no-confusing-arrow": "error",
-        "@stylistic/no-extra-parens": "error",
+        "@stylistic/no-extra-parens": [
+          "error",
+          "all",
+          {
+            "nestedBinaryExpressions": false,
+            "enforceForArrowConditionals": false
+          }
+        ],
         "@stylistic/no-extra-semi": "error",
         "@stylistic/no-floating-decimal": "error",
         "@stylistic/no-mixed-operators": "error",
