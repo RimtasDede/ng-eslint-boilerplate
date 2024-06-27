@@ -41,6 +41,8 @@
         ],
 
         "@typescript-eslint/array-type": "error",
+        "@typescript-eslint/no-unused-vars": "warn",
+        "@typescript-eslint/no-shadown": "error",
         "@typescript-eslint/member-ordering": [
           "error",
           {
@@ -98,7 +100,7 @@
         "no-unsafe-negation": "error",
         "no-unsafe-optional-chaining": "error",
         "no-unused-private-class-members": "error",
-        "no-unused-vars": ["warn", { "args": "none" }],
+        "no-unused-vars": "off",
         "no-use-before-define": ["error", { "classes": false }],
         "no-useless-backreference": "error",
         "require-atomic-updates": "error",
@@ -132,9 +134,16 @@
         "max-classes-per-file": "off",
         "max-depth": ["error", 4],
         "max-lines": "off",
-        "max-lines-per-function": ["error", 150],
+        "max-lines-per-function": [
+          "error",
+          {
+            "max": 100,
+            "skipBlankLines": true,
+            "skipComments": true
+          }
+        ],
         "max-nested-callbacks": "off",
-        "max-params": ["warn", 8],
+        "max-params": ["warn", 15],
         "max-statements": ["warn", 50],
         "new-cap": "off",
         "no-alert": "warn",
@@ -194,11 +203,11 @@
         "no-script-url": "error",
         "no-sequences": "error",
         "no-shadow": "error",
-        "no-shadow-restricted-names": "off",
+        "no-shadow-restricted-names": "error",
         "no-ternary": "off",
         "no-throw-literal": "error",
         "no-undef-init": "error",
-        "no-undefined": "error",
+        "no-undefined": "off",
         "no-underscore-dangle": "warn",
         "no-unneeded-ternary": "error",
         "no-unused-expressions": "error",
@@ -297,7 +306,7 @@
         "@stylistic/nonblock-statement-body-position": "error",
         "@stylistic/object-curly-newline": ["error", { "consistent": true }],
         "@stylistic/object-curly-spacing": ["error", "always"],
-        "@stylistic/object-property-newline": "error",
+        "@stylistic/object-property-newline": "off",
         "@stylistic/one-var-declaration-per-line": "error",
         "@stylistic/operator-linebreak": [
           "error",
@@ -314,7 +323,8 @@
         "@stylistic/padded-blocks": ["error", "never"],
         "@stylistic/padding-line-between-statements": [
           "error",
-          { "blankLine": "always", "prev": ["const", "let", "var"], "next": "*" },
+          { "blankLine": "always", "prev": ["const", "let", "var", "block-like"], "next": "*" },
+          { "blankLine": "always", "prev": "*", "next": "return" },
           { "blankLine": "any",    "prev": ["const", "let", "var"], "next": ["const", "let", "var"] }
         ],
         "@stylistic/quote-props": ["error", "as-needed"],
@@ -351,14 +361,9 @@
         "jest": true
       },
       "globals": {
-        "describe": "readonly",
-        "fdescribe": "readonly",
-        "beforeEach": "readonly",
-        "it": "readonly",
-        "fit": "readonly",
-        "expect": "readonly"
       },
       "rules": {
+        "max-lines-per-function": "off"
       }
     },
     {
